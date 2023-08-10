@@ -2,7 +2,9 @@
 /**
  * main - the begining of the main function
  *
- * Return: always 0
+ * Description: using sizeof to print the size of various type
+ *
+ * Return: always 0 success
  */
 int main(void)
 {
