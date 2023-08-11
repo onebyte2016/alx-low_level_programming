@@ -7,14 +7,19 @@
 *
 * betty style doc for function main goes there
 */
+
 int main(void)
 {
-int i;
-for (i = 0; i < 10; i++)
+int i = 0;
+while (i < 10)
 {
 putchar(i + '0');
+if (i < 9)
+{
 putchar(',');
 putchar(' ');
+}
+i++;
 }
 putchar('\n');
 return (0);
