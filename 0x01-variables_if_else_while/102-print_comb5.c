@@ -9,26 +9,20 @@
 */
 int main(void)
 {
-int a;
-int b;
-for (a = 0; a <= 99; a++)
+int i, j;
+for (i = 0; i < 100; i++)
 {
-for (b = 1; b <= 99; b++)
+for (j = 0; j < 100; j++)
 {
-if (a <= b)
+if (i < j)
 {
-if (a < 10)
-{
-putchar('0');
-}
-printf("%d", a);
+putchar((i / 10) + 48);
+putchar((i % 10) + 48);
 putchar(' ');
-if (b < 10)
-{
-putchar('0');
-}
-printf("%d", b);
-if (a < 99 ||  b < 99)
+putchar((j / 10) + 48);
+putchar((j % 10) + 48);
+
+if (i != 98 || j != 99)
 {
 putchar(',');
 putchar(' ');
