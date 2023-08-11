@@ -9,8 +9,8 @@
 
 int main(void)
 {
-char lowerLetter = 'a';
-while (lowerLetter >= 'z')
+char lowerLetter = 'z';
+while (lowerLetter >= 'a')
 {
 putchar(lowerLetter);
 lowerLetter--;
