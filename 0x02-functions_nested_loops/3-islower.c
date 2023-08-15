@@ -2,6 +2,7 @@
 
 /**
 * _islower - It compares lower case letter
+* int c - its is parameter passed on the function
 *
 * Return: Always 0
 */
