@@ -2,8 +2,9 @@
 
 /**
 * _islower - It compares lower case letter
-* 
-* c - its is parameter passed on the function
+*
+* @c: parameter member
+* int c - its is parameter passed on the function.
 *
 * Return: Always 0
 */
