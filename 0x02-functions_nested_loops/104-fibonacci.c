@@ -2,13 +2,11 @@
 #include <stdio.h>
 
 /**
-* main - the main function body of the program.
-*
 * numlenght - function that calculate lenght.
 *
 * @num: parameter passed on the function numlenght
 *
-* Return: Always 0.
+* Return: return the digit number.
 */
 
 int numlenght(int num)
@@ -24,7 +22,14 @@ lenght += 1;
 return (lenght);
 }
 
-/* main - the main function body of the program.*/
+/**
+* main - the main function body of the program.
+*
+* Description: print the first 98 fibanocci numbers starting with 1 and 2.
+*
+* Return: Always 0.
+*/
+
 int main(void)
 {
 int count, initial0s;
