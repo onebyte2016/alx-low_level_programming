@@ -1,11 +1,10 @@
 #include "main.h"
+
 /**
  * puts2 - function to print string
  *
  * @str: parameter passed
  */
-
-
 
 void puts2(char *str)
 {
