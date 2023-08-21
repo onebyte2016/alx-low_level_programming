@@ -18,8 +18,9 @@ void print_rev(char *s)
 		stringLength++;
 	}
 
+	int i;
 
-	for (int i = stringLength - 1; i >= 0; i--)
+	for (i = stringLength - 1; i >= 0; i--)
 
 	{
 		putchar(s[i]);
