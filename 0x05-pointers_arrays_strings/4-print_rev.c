@@ -10,6 +10,7 @@
 
 void print_rev(char *s)
 {
+	int i;
 	int stringLength = 0;
 
 
@@ -18,7 +19,6 @@ void print_rev(char *s)
 		stringLength++;
 	}
 
-	int i;
 
 	for (i = stringLength - 1; i >= 0; i--)
 
