@@ -16,7 +16,7 @@ int main(void)
 	p = &n;
 
 
-	 *(p + 5) = 98;
+	*p = a[2] - 926;
 	/*
 	 * write your line of code here..
 	 * Remember:
