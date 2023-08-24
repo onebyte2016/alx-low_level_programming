@@ -2,10 +2,38 @@
 #include <stdio.h>
 
 /**
+ * isLower - functionfor lower case string
+ * @c: first parameter
+ *
+ * Return: pointeir
+ */
+int isLower(char c)
+{
+	return (c >= 97 && c <= 122);
+}
+
+/**
+ * isDelimiter - functionfor lower case string
+ * @c: first parameter
+ *
+ * Return: pointer
+ */
+int isDelimiter(char c)
+{
+	int i;
+
+	char delimiter[] = " \t\n,.!?\"(){}";
+
+	for (i = 0; i < 12; i++)
+		if (c == delimiter[i])
+			return (1);
+	return (0);
+}
+/**
  * cap_string - function to concantenate string
  * @s: first parameter
  *
- * Return: pointer
+ * Return: pointeir
  */
 
 
