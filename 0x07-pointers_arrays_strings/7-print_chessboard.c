@@ -1,11 +1,10 @@
 #include "main.h"
-#include <string.h>
 #include <stdio.h>
 
 /**
  * print_chessboard - copy memory for src to dest
  * @a: the address of memory to copy
- * Return: dest.
+ *
  */
 
 void print_chessboard(char (*a)[8])
