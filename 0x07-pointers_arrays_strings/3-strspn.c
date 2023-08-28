@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdio.h>
+#include <string.h>
 /**
  * _strspn - copy memory for src to dest
  * @s: the address of memory to copy
