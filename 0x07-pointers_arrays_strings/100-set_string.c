@@ -11,12 +11,5 @@
 
 void set_string(char **s, char *to)
 {
-
-	*s = (char *)malloc(strlen(to) + 1);
-
-	if (*s != NULL)
-	{
-
-		strcpy(*s, to);
-	}
+	*s = to;
 }
