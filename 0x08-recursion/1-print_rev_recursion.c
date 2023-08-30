@@ -3,7 +3,6 @@
  * _print_rev_recursion - function to print reverse string
  * @s: character parameter
  *
- * Return: Always 0.
  */
 
 
