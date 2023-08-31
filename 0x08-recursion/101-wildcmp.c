@@ -1,50 +1,48 @@
 #include "main.h"
-/**
- * wildcmp_helper - check the code
- * @s1: first parameter
- * @s2: second parameter
- *
- * Return: Always 0.
- */
-int wildcmp_helper(char *s1, char *s2)
-{
-	if (*s1 == '\0' && *s2 == '\0')
-	{
 
+/**
+ * str_helper - check if two strings are identical.
+ * @s1: string_1 base address.
+ * @s2: string_2 base address.
+ * @i: left index.
+ * @j: special index.
+ * Return: 1 if s is palindrome, 0 otherwise.
+ */
+
+int str_helper(char *s1, char *s2, int i, int j)
+{
+	if (s1[i] == '\0' && s2[j] == '\0')
+	{
 		return (1);
 	}
-	else if (*s2 == '*')
-	{
 
-		while (*s1 != '\0')
-		{
-			if (wildcmp_helper(s1, s2 + 1))
-			{
-				return (1);
-			}
-			s1++;
-		}
-		return (wildcmp_helper(s1, s2 + 1));
-	}
-	else if (*s1 != '\0' && *s2 != '\0' && (*s1 == *s2 || *s2 == '?'))
+	if (s1[i] == s2[j])
 	{
+		return (str_helper(s1, s2, i + 1, j + 1));
+	}
 
-		return (wildcmp_helper(s1 + 1, s2 + 1));
-	}
-	else
+	if (s1[i] == '\0' && s2[j] == '*')
 	{
-		return (0);
+		return (str_helper(s1, s2, i, j + 1));
 	}
+
+	if (s2[j] == '*')
+	{
+		return (str_helper(s1, s2, i + 1, j) || str_helper(s1, s2, i, j + 1));
+	}
+
+	return (0);
 }
 
 /**
- * wildcmp - check the code
- * @s1: first parameter
- * @s2: second parameter
+ * wildcmp - check if strings are identical
+ * @s1: base address for string.
+ * @s2: base address for string.
  *
- * Return: Always 0.
+ * Return: 1 if condition is true
  */
+
 int wildcmp(char *s1, char *s2)
 {
-	return (wildcmp_helper(s1, s2));
+	return (str_helper(s1, s2, 0, 0));
 }
