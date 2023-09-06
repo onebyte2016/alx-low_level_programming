@@ -6,6 +6,7 @@
 /**
  * _strlen - function for lenght of string
  * @s: parameter passed
+ * Return: Always 0
  */
 
 
