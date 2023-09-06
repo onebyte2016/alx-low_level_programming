@@ -1,7 +1,22 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
+/**
+ * _strlen - function for lenght of string
+ * @s: parameter passed
+ */
+
+
+int _strlen(char *s)
+{
+	int size = 0;
+
+	for (; s[size] != '\0'; size++)
+		;
+	return (size);
+}
 
 /**
  * argstostr - function for argument
@@ -11,28 +26,26 @@
  */
 char *argstostr(int ac, char **av)
 {
-	int i, j, k = 0;
-	int count = 0;
-	char *output;
+	int i = 0, nc = 0, j = 0, cmpt = 0;
+	char *s;
+
+	if (ac == 0 || av == NULL)
+		return (NULL);
+
+	for (; i < ac; i++, nc++)
+		nc += _strlen(av[i]);
+	s = malloc(sizeof(char) * nc + 1);
+	if (s == 0)
+		return (NULL);
 
 	for (i = 0; i < ac; i++)
 	{
-		for (j = 0; av[i][j] != '\0'; j++)
-			count++;
-		count++;
+		for (j = 0; av[i][j] != '\0'; j++, cmpt++)
+			s[cmpt] = av[i][j];
+
+		s[cmpt] = '\n';
+		cmpt++;
 	}
-	output = malloc(sizeof(char) * count + 1);
-	if (output == NULL)
-		return (NULL);
-	for (i = 0; i < ac; i++)
-	{
-		for (j = 0; av[i][j] != '\0'; j++)
-		{
-			output[k] = av[i][j];
-			k++;
-		}
-		output[k++] = '\n';
-	}
-	output[k] = '\0';
-	return (output);
+	s[cmpt] = '\0';
+	return (s);
 }
