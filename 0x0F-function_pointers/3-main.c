@@ -6,7 +6,7 @@
  * main - check code
  * @argc: the number of args
  * @argv: the argument vector
- * Return Always 0 
+ * Return: Always 0
  */
 
 int main(int argc, char **argv)
