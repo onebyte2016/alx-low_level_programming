@@ -19,10 +19,5 @@ void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);
 void print_all(const char * const format, ...);
 int _putchar(char c);
-void format_string(char *separator, va_list ap);
-void format_float(char *separator, va_list ap);
-void format_int(char *separator, va_list ap);
-void format_char(char *separator, va_list ap);
-void print_strings(const char *separator, const unsigned int n, ...);
 void print_all(const char * const format, ...);
 #endif
