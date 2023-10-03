@@ -1,7 +1,5 @@
 #ifndef MAIN_H
 #define MAIN_H
-
-#include <stadio.h>
 #include <stdlib.h>
 #include <sys/types.h>
 #include <sys/stat.h>
